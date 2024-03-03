@@ -53,3 +53,7 @@ class Director():
 ```
 Die großen Vorteile, wenn man die Entwurfmuster richtig anwendet, sind ein besseres Verständnis von Code, auch für andere Entwickler, da die Struktur immer gleichbleibt. Dadurch wird auch die Flexibilität und Erweiterbarkeit des Projektes erhöht, da alle beteiligten das Projekt verstehen können und schnell Änderungen und Verbesserungen vornehmen können. Die Flexibilität wird auch dadurch erhöht, dass durch viele Entwurfsmuster die Repetition dramatisch verringert wird. Man muss also nur zum Beispiel einen Parameter ändern, um ein Verhalten zu ändern und nicht viel neuen Code schreiben. Einige Entwurfmuster können zu Beginn allerdings nicht intuitiv sein, wodurch es eine längere Lernphase geben kann, in der man sich mit den Entwurfmustern vertraut machen muss.
 
+Quellen:
+https://www.philipphauer.de/study/se/design-pattern/strategy.php
+https://refactoring.guru/
+ChatGPT für Inspiration
