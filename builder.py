@@ -8,16 +8,16 @@ class builder():
     def product(self) -> None:
         pass
     @abstractmethod
-    def buildWalls(self) -> None:
+    def buildWalls(self, number) -> None:
         pass
     @abstractmethod
     def buildRoof(self) -> None:
         pass
     @abstractmethod
-    def buildWindows(self) -> None:
+    def buildWindows(self, number) -> None:
         pass
     @abstractmethod
-    def buildDoors(self) -> None:
+    def buildDoors(self, number) -> None:
         pass
     @abstractmethod
     def buildGarden(self) -> None:
@@ -50,17 +50,17 @@ class WoodHouseBuilder(builder):
         self.reset()
         return product
 
-    def buildWalls(self) -> None:
-        self._product.addPart("Wooden Walls")
+    def buildWalls(self, number) -> None:
+        self._product.addPart(f"Wooden {number} Walls")
     
     def buildRoof(self) -> None:
         self._product.addPart("Wooden Roof")
 
-    def buildWindows(self) -> None:
-        self._product.addPart("Windows with Wooden Frame")
+    def buildWindows(self, number) -> None:
+        self._product.addPart(f"{number} Windows with Wooden Frame")
 
-    def buildDoors(self) -> None:
-        self._product.addPart("Wooden Doors")
+    def buildDoors(self, number) -> None:
+        self._product.addPart(f"{number} Wooden Doors")
 
     def buildGarden(self) -> None:
         self._product.addPart("Garden with Wooden Fence")
@@ -70,40 +70,6 @@ class WoodHouseBuilder(builder):
     
     def buildSwimmingPool(self) -> None:
         self._product.addPart("Building Wooden Swimming Pool")
-
-class StoneHouseBuilder(builder):
-    def __init__(self):
-        self.reset()
-
-    def reset(self):
-        self._product = House()
-
-    @property
-    def product(self) -> House:
-        product = self._product
-        self.reset()
-        return product
-
-    def buildWalls(self) -> None:
-        self._product.addPart("Stone Walls")
-    
-    def buildRoof(self) -> None:
-        self._product.addPart("Stone Roof")
-
-    def buildWindows(self) -> None:
-        self._product.addPart("Windows with Stone Frame")
-
-    def buildDoors(self) -> None:
-        self._product.addPart("Stone Doors")
-
-    def buildGarden(self) -> None:
-        self._product.addPart("Garden with Stone Fence")
-
-    def buildGarage(self) -> None:
-        self._product.addPart("Building Stone Garage")
-    
-    def buildSwimmingPool(self) -> None:
-        self._product.addPart("Building Stone Swimming Pool")
 
 class ConcreteHouseBuilder(builder):
     def __init__(self):
@@ -118,17 +84,17 @@ class ConcreteHouseBuilder(builder):
         self.reset()
         return product
 
-    def buildWalls(self) -> None:
-        self._product.addPart("Concrete Walls")
+    def buildWalls(self, number=4) -> None:
+        self._product.addPart(f"Concrete {number} Walls")
     
     def buildRoof(self) -> None:
-        self._product.addPart("Concrete Roof")
+        self._product.addPart("Roof")
 
-    def buildWindows(self) -> None:
-        self._product.addPart("Windows with Concrete Frame")
+    def buildWindows(self, number=4) -> None:
+        self._product.addPart(f"{number} Windows embedded in Concrete")
 
-    def buildDoors(self) -> None:
-        self._product.addPart("Concrete Doors")
+    def buildDoors(self, number=4) -> None:
+        self._product.addPart(f"{number} Concrete Doors")
 
     def buildGarden(self) -> None:
         self._product.addPart("Garden with Concrete Fence")
@@ -151,17 +117,17 @@ class Director():
     def builder(self, builder: builder) -> None:
         self._builder = builder
 
-    def buildStandartHouse(self) -> None:
-        self.builder.buildWalls()
+    def buildStandardHouse(self) -> None:
+        self.builder.buildWalls(4)
         self.builder.buildRoof()
-        self.builder.buildWindows()
-        self.builder.buildDoors()
+        self.builder.buildWindows(6)
+        self.builder.buildDoors(2)
     
     def buildLuxuryHouse(self) -> None:
-        self.builder.buildWalls()
+        self.builder.buildWalls(8)
         self.builder.buildRoof()
-        self.builder.buildWindows()
-        self.builder.buildDoors()
+        self.builder.buildWindows(20)
+        self.builder.buildDoors(6)
         self.builder.buildGarden()
         self.builder.buildGarage()
         self.builder.buildSwimmingPool()
@@ -172,7 +138,7 @@ if __name__ == "__main__":
     director.builder = builder
 
     print("Standard House:")
-    director.buildStandartHouse()
+    director.buildStandardHouse()
     builder.product.listParts()
 
     builder = ConcreteHouseBuilder()
@@ -180,4 +146,4 @@ if __name__ == "__main__":
 
     print("\n\nLuxury House:")
     director.buildLuxuryHouse()
-    builder.product.listParts() 
+    builder.product.listParts()
