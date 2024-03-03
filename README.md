@@ -1,7 +1,7 @@
 # PL Informatik – Pius Hartmann
-Erläutern Sie den Grundgedanken von Entwurfmustern und gehen sie insbesondere auf die Klassifikation Erzeuger-, Struktur-, und Verhaltensmuster ein.
-Implementieren sie exemplarische ein Entwurfmuster in Python
-Erörtern sie die Vor- und Nachteile von Entwurfmuster.
+**Erläutern** Sie den Grundgedanken von Entwurfmustern und gehen sie insbesondere auf die Klassifikation Erzeuger-, Struktur-, und Verhaltensmuster ein.
+**Implementieren** sie exemplarische ein Entwurfmuster in Python
+**Erörtern** sie die Vor- und Nachteile von Entwurfmuster.
 
 Entwurfmuster sind auf der Objektorientierung basierte Lösungsansätze für Probleme, die bei komplexen Projekten eingesetzt werden können, um Probleme zu abstrahieren, damit sie einzeln angegangen werden können. Ein Entwurfsmuster ist eine Schablone, mit der man Probleme besser angehen kann, wodurch das Projekt übersichtlicher, besser zu verstehen wird und einfacher zu erweitern
 Es gibt drei unterschiedliche Hauptkategorien: Erzeuger-, Struktur-, und Verhaltensmuster. Die Erzeuger können ein Objekt auf unterschiedliche Art erstellen, was zu höher Code wieder Verwendbarkeit und Flexibilität führt. Die Strukturmuster machen es einfacher eine Klasse zu designen, die auch bei höherer Komplexität übersichtlich bleiben. Und die Verhaltensmuster erleichtern die Kommunikation und Interaktion zwischen Objekten, indem sie die Kommunikation standardisieren.
