@@ -1,6 +1,8 @@
 # PL Informatik – Pius Hartmann
 **Erläutern** Sie den Grundgedanken von Entwurfmustern und gehen sie insbesondere auf die Klassifikation Erzeuger-, Struktur-, und Verhaltensmuster ein.
+
 **Implementieren** sie exemplarische ein Entwurfmuster in Python
+
 **Erörtern** sie die Vor- und Nachteile von Entwurfmuster.
 
 Entwurfmuster sind auf der Objektorientierung basierte Lösungsansätze für Probleme, die bei komplexen Projekten eingesetzt werden können, um Probleme zu abstrahieren, damit sie einzeln angegangen werden können. Ein Entwurfsmuster ist eine Schablone, mit der man Probleme besser angehen kann, wodurch das Projekt übersichtlicher, besser zu verstehen wird und einfacher zu erweitern
@@ -53,7 +55,10 @@ class Director():
 ```
 Die großen Vorteile, wenn man die Entwurfmuster richtig anwendet, sind ein besseres Verständnis von Code, auch für andere Entwickler, da die Struktur immer gleichbleibt. Dadurch wird auch die Flexibilität und Erweiterbarkeit des Projektes erhöht, da alle beteiligten das Projekt verstehen können und schnell Änderungen und Verbesserungen vornehmen können. Die Flexibilität wird auch dadurch erhöht, dass durch viele Entwurfsmuster die Repetition dramatisch verringert wird. Man muss also nur zum Beispiel einen Parameter ändern, um ein Verhalten zu ändern und nicht viel neuen Code schreiben. Einige Entwurfmuster können zu Beginn allerdings nicht intuitiv sein, wodurch es eine längere Lernphase geben kann, in der man sich mit den Entwurfmustern vertraut machen muss.
 
-Quellen:
-https://www.philipphauer.de/study/se/design-pattern/strategy.php
-https://refactoring.guru/
+### Quellen:
+
+[Philipp hauer design patterns](https://www.philipphauer.de/study/se/design-pattern/strategy.php)
+
+[Refactoring Guru](https://refactoring.guru/)
+
 ChatGPT für Inspiration
